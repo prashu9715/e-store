@@ -8,8 +8,8 @@
                     <!-- Top Left -->
                     <div class="top-left">
                         <ul class="list-main">
-                            <li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-                            <li><i class="ti-email"></i> support@shophub.com</li>
+                            <li><i class="ti-headphone-alt"></i>+91 7200632341</li>
+                            <li><i class="ti-email"></i> prasanth@gmail.com</li>
                         </ul>
                     </div>
                     <!--/ End Top Left -->
@@ -18,10 +18,11 @@
                     <!-- Top Right -->
                     <div class="right-content">
                         <ul class="list-main">
-                            <li><i class="ti-location-pin"></i> Store location</li>
+                            <!-- <li><i class="ti-location-pin"></i> Store location</li> -->
                             <li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
-                            <li><i class="ti-user"></i> <a href="#">My account</a></li>
+                            <li><i class="ti-user"></i> <a routerLink="/main/user-profile">My account</a></li>
                             <li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
+                            <li><i class="ti-power-off"></i><a href="login.html#">Logout</a></li>
                         </ul>
                     </div>
                     <!-- End Top Right -->
@@ -36,7 +37,7 @@
                 <div class="col-lg-2 col-md-2 col-12">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                        <a routerLink="/main/main"><img src="images/logo.png" alt="logo"></a>
                     </div>
                     <!--/ End Logo -->
                     <!-- Search Form -->
@@ -54,41 +55,39 @@
                     <!--/ End Search Form -->
                     <div class="mobile-nav"></div>
                 </div>
-                <div class="col-lg-8 col-md-7 col-12">
+                <div class="col-lg-6 col-md-7 col-12">
                     <div class="search-bar-top">
                         <div class="search-bar">
                             <div class="nice-select" tabindex="0">
                                 <span class="current">All Category</span>
                                 <ul class="list">
                                     <li data-value="All Category" class="option selected focus">All Category</li>
-                                    <li data-value="watch" class="option">watch</li>
-                                    <li data-value="mobile" class="option">mobile</li>
-                                    <li data-value="kid’s item" class="option">kid’s item</li>
                                 </ul>
                             </div>
                             <form>
                                 <input name="search" placeholder="Search Products Here....." type="search">
-                                <button class="btnn"><i class="ti-search"></i></button>
+                                <button (click)="search()" class="btnn"><i class="ti-search"></i></button>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-12">
+                <div class="col-lg-4 col-md-3 col-12">
                     <div class="right-bar">
                         <!-- Search Form -->
-                        <div class="sinlge-bar">
+                        <!-- <div class="sinlge-bar">
                             <a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                        </div>
+                        </div> -->
                         <div class="sinlge-bar">
-                            <a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+                            Hello,Prasanth
+                            <a routerLink="/main/user-profile" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                         </div>
                         <div class="sinlge-bar shopping">
-                            <a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
+                            <a routerLink="/main/cart" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
                             <!-- Shopping Item -->
                             <div class="shopping-item">
                                 <div class="dropdown-cart-header">
                                     <span>2 Items</span>
-                                    <a href="#">View Cart</a>
+                                    <a routerLink="/main/cart">View Cart</a>
                                 </div>
                                 <ul class="shopping-list">
                                     <li>
@@ -96,6 +95,24 @@
                                         <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
                                         <h4><a href="#">Woman Ring</a></h4>
                                         <p class="quantity">1x - <span class="amount">$99.00</span></p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+                                        <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
+                                        <h4><a href="#">Woman Necklace</a></h4>
+                                        <p class="quantity">1x - <span class="amount">$35.00</span></p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+                                        <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
+                                        <h4><a href="#">Woman Necklace</a></h4>
+                                        <p class="quantity">1x - <span class="amount">$35.00</span></p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+                                        <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
+                                        <h4><a href="#">Woman Necklace</a></h4>
+                                        <p class="quantity">1x - <span class="amount">$35.00</span></p>
                                     </li>
                                     <li>
                                         <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
@@ -133,23 +150,11 @@
                                 <div class="navbar-collapse">	
                                     <div class="nav-inner">	
                                         <ul class="nav main-menu menu navbar-nav">
-                                                <li class="active"><a href="#">Home</a></li>
-                                                <li><a href="#">Product</a></li>												
-                                                <li><a href="#">Service</a></li>
-                                                <li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
-                                                    <ul class="dropdown">
-                                                        <li><a href="shop-grid.html">Shop Grid</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Pages</a></li>									
-                                                <li><a href="#">Blog<i class="ti-angle-down"></i></a>
-                                                    <ul class="dropdown">
-                                                        <li><a href="blog-single-sidebar.html">Blog Single Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact Us</a></li>
+                                                <li routerLinkActive="active"><a routerLink="/main/main">Home</a></li>
+                                                <li><a routerLink="/main/product-list" routerLinkActive="active">Products</a></li>												
+                                                <li><a routerLink="/main/my-orders">My Orders</a></li>
+                                                <li><a routerLink="/main/contact" routerLinkActive="active">Contact Us</a></li>
+                                                <li><a href="#">About Us</a></li>
                                             </ul>
                                     </div>
                                 </div>

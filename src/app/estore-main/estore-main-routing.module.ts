@@ -6,6 +6,8 @@ import { CheckoutComponent } from './component/checkout/checkout.component';
 import { CartComponent } from './component/cart/cart.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ProductDetailsComponent } from './component/product-details/product-details.component';
+import { UserProfileComponent } from './component/user-profile/user-profile.component';
+import { MyOrdersComponent } from './component/my-orders/my-orders.component';
 
 
 const routes: Routes = [
@@ -37,6 +39,16 @@ const routes: Routes = [
   {
     path: 'product-details',
     component: ProductDetailsComponent,
+    pathMatch:'full'
+  },
+  {
+    path: 'user-profile',
+    component: UserProfileComponent,
+    pathMatch:'full'
+  },
+  {
+    path: 'my-orders',
+    component: MyOrdersComponent,
     pathMatch:'full'
   },
   {

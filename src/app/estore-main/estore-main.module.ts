@@ -8,6 +8,11 @@ import { CheckoutComponent } from './component/checkout/checkout.component';
 import { ProductListComponent } from './component/product-list/product-list.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ProductDetailsComponent } from './component/product-details/product-details.component';
+import { RouterModule } from '@angular/router';
+import { UserProfileComponent } from './component/user-profile/user-profile.component';
+import { MyOrdersComponent } from './component/my-orders/my-orders.component';
+import { AboutUsComponent } from './component/about-us/about-us.component';
+
 
 
 
@@ -20,10 +25,14 @@ import { ProductDetailsComponent } from './component/product-details/product-det
   CheckoutComponent,
   ProductListComponent,
   ContactComponent,
-  ProductDetailsComponent
+  ProductDetailsComponent,
+  UserProfileComponent,
+  MyOrdersComponent,
+  AboutUsComponent
 ],
   imports: [
-    EstoreMainRoutingModule
+    EstoreMainRoutingModule,
+    RouterModule
   ],
   providers: [],
 })

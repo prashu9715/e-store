@@ -1,0 +1,81 @@
+<app-header></app-header>
+<div class="container">
+    <div class="offset-1 page-heading">
+        <h4>Your Profile</h4>
+    </div>
+    <div class="user-profile">
+        <!-- <div class="row">
+            <div class="col-lg-8 col-md-4 col-12"><h1>User name</h1></div>
+        </div> -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <!--left col-->
+                <div class="text-center">
+                            <h6>Your Name</h6>
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail"
+                    alt="avatar">
+                <input type="file" class="text-center center-block file-upload">
+            </div><br>
+        </div>
+        <div class="col-lg-9 col-md-6 col-12">
+            <div id="contact-us" class="contact-us">
+                <div class="form-main">
+                    <fieldset disabled="disabled">
+                    <form class="form" method="post" action="mail/mail.php" >
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label>First Name<span>*</span></label>
+                                    <input name="firstName" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input name="lastName" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label>Email Id<span>*</span></label>
+                                    <input name="emailId" type="email" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label>Mobile<span>*</span></label>
+                                    <input name="mobile" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label>Password<span>*</span></label>
+                                    <input name="password" type="text" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label>Confirm Password<span>*</span></label>
+                                    <input name="confirmPassword" type="text" placeholder="">
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-12">
+                                <div class="form-group button">
+                                    <button type="submit" class="btn ">Save</button>
+                                    <button class="btn ">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!--/row-->
+
+<app-footer></app-footer>
