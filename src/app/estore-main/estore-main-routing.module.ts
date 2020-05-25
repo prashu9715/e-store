@@ -8,6 +8,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { ProductDetailsComponent } from './component/product-details/product-details.component';
 import { UserProfileComponent } from './component/user-profile/user-profile.component';
 import { MyOrdersComponent } from './component/my-orders/my-orders.component';
+import { AboutUsComponent } from './component/about-us/about-us.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,11 @@ const routes: Routes = [
   {
     path: 'my-orders',
     component: MyOrdersComponent,
+    pathMatch:'full'
+  },
+  {
+    path: 'about-us',
+    component: AboutUsComponent,
     pathMatch:'full'
   },
   {

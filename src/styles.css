@@ -144,7 +144,10 @@ Version:1.0
 	display: inline-block;
 	padding: 13px 32px;
 	border-radius: 0px;
-	text-transform:uppercase;
+
+}
+.common-link{
+	color:#F7941D;
 }
 .btn:hover{
 	color:#fff;

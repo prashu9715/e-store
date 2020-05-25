@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
-import { AuthComponent } from './component/auth/auth.component';
 import { EstoreAuthRoutingModule } from './estore-auth-routing.module';
+import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
+import { FormsModule } from '@angular/forms';
+import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
 
 
 
 @NgModule({
   declarations: [
-  AuthComponent],
+  LoginComponent,
+  SignupComponent,
+  ForgetPasswordComponent,
+  ResetPasswordComponent],
   imports: [
-    EstoreAuthRoutingModule
+    EstoreAuthRoutingModule,
+    FormsModule
   ],
   providers: [],
 })
