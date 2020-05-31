@@ -17,28 +17,10 @@
 					<div class="col-lg-3 col-md-4 col-12">
 						<div class="shop-sidebar">
 								<!-- Single Widget -->
-								<div class="single-widget category">
+								<div class="single-widget category" *ngIf="categoryList?.length > 0">
 									<h3 class="title">Categories</h3>
-									<div class="scroller">
-									<ul class="categor-list">
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">T-shirts</a></li>
-										
+									<ul class="categor-list" style="height: 15rem;overflow: auto;">
+										<li *ngFor="let category of categoryList"><a href="#">{{category.name}}</a></li>
 									</ul>
 								</div>
 								</div>

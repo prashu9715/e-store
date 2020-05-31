@@ -8,6 +8,7 @@ import { EstoreAuthModule } from './estore-auth/estore-auth.module';
 import { EstoreMainModule } from './estore-main/estore-main.module';
 import { HeaderComponent } from './estore-main/component/common/header/header.component';
 import { FooterComponent } from './estore-main/component/common/footer/footer.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './estore-main/component/common/footer/footer.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
