@@ -18,8 +18,6 @@ import { AboutUsComponent } from './component/about-us/about-us.component';
 
 @NgModule({
   declarations: [
-  HeaderComponent,
-  FooterComponent,
   MainPageComponent,
   CartComponent,
   CheckoutComponent,
