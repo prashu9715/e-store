@@ -11,7 +11,7 @@
 	</div>
 	</div>
 		<!-- Product Style -->
-		<section class="product-area shop-sidebar shop section">
+		<section class="product-area shop-sidebar shop section" *ngIf="ready">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 col-md-4 col-12">
@@ -43,20 +43,11 @@
 									<!--/ End Shop By Price -->
 								<!-- Single Widget -->
 								<!-- Single Widget -->
-								<div class="single-widget category">
+								<div class="single-widget category" *ngIf="manufacturerList?.length > 0">
 									<h3 class="title">Manufacturers</h3>
 									<div class="scroller">
 									<ul class="categor-list">
-										<li><a href="#">Forever</a></li>
-										<li><a href="#">giordano</a></li>
-										<li><a href="#">abercrombie</a></li>
-										<li><a href="#">ecko united</a></li>
-										<li><a href="#">zara</a></li>
-										<li><a href="#">Forever</a></li>
-										<li><a href="#">giordano</a></li>
-										<li><a href="#">abercrombie</a></li>
-										<li><a href="#">ecko united</a></li>
-										<li><a href="#">zara</a></li>
+										<li *ngFor="let manufacturer of manufacturerList"><a href="#">{{manufacturer.name}}</a></li>
 									</ul>
 								</div>
 								</div>
@@ -351,4 +342,9 @@
 				</div>
 			</div>
 		</section>
-		<!--/ End Product Style 1  -->	
+		<!--/ End Product Style 1  -->
+		<div class="product-spinner" style="display: flex;flex-direction:column;align-items: center;padding: 3rem;" *ngIf="!ready">
+			<mat-spinner></mat-spinner>
+			<p>Loading please wait...</p>
+		</div>	
+		

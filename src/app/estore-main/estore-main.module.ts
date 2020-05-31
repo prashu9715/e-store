@@ -14,7 +14,8 @@ import { MyOrdersComponent } from './component/my-orders/my-orders.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
+import { ProductListService } from './component/product-list/product-list.service';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -33,8 +34,9 @@ import { CommonModule } from '@angular/common';
     EstoreMainRoutingModule,
     RouterModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [ProductListService],
 })
 export class EstoreMainModule { }

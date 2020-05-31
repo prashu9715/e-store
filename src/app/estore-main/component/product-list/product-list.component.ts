@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ProductListService } from './product-list.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-product-list',
@@ -7,15 +8,19 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  private REST_API_SERVER = "ecommerce/getCategoryList";
-  categoryList:any;
+  categoryList: any;
+  manufacturerList: any;
+  ready: boolean = false;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private productListService: ProductListService) { }
 
   ngOnInit(): void {
-    this.httpClient.get(this.REST_API_SERVER).subscribe(data => {
-      this.categoryList = data;
-    })
+    forkJoin([this.productListService.getCategoryList(),
+    this.productListService.getManufacturerList()]).subscribe(response => {
+      this.categoryList = response[0];
+      this.manufacturerList = response[1];
+      this.ready = true;
+    });
   }
 
 }
