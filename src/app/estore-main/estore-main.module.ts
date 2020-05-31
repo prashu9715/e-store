@@ -12,7 +12,8 @@ import { RouterModule } from '@angular/router';
 import { UserProfileComponent } from './component/user-profile/user-profile.component';
 import { MyOrdersComponent } from './component/my-orders/my-orders.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -32,7 +33,9 @@ import { AboutUsComponent } from './component/about-us/about-us.component';
 ],
   imports: [
     EstoreMainRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
 })
